@@ -1,0 +1,57 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Posh Hermes" Height="200" Width="800">
+    <Grid >
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Top" Margin="0,0,0,20">
+                <Menu >
+                    <MenuItem Header="_File">
+                        <MenuItem Name="SettingsMenu" Header="_Settings" />
+                        <MenuItem Name="CiscoSettings" Header="_Cisco Settings" />
+                        <MenuItem Name="Export" Header="_Export" />
+                    </MenuItem>
+                    <MenuItem Header="_Import">
+                        <MenuItem Name="inputbox" Header="_Devices" />
+                    </MenuItem>
+                    <MenuItem Name="GetInfo" Header="_Get Info">
+                        <MenuItem Name="CreateCustomGetInfo" Header="_Create Custom Get Info" />
+                        <MenuItem Name="CustomGetInfo" Header="C_ustom Get Info" />
+                        <Separator />
+                    </MenuItem>
+
+                    <MenuItem Name="RunScript" Header="_Run">
+                        <MenuItem Name="CreateCustomRun" Header="_Create Custom Run" />
+                        <MenuItem Name="CustomRun" Header="C_ustom Run" />
+                        <Separator />
+                    </MenuItem>
+                    <MenuItem Name="MenuDeploy" Header="_Deploy">
+                        <MenuItem Name="CreateCustomDeploy" Header="_Create Custom Deploy" />
+                        <MenuItem Name="CustomDeploy" Header="C_ustom Deploy" />
+                        <Separator />
+                        <MenuItem Name="Software" Header="_Software" />
+                    </MenuItem>
+                    <MenuItem Header="_Help">
+                        <MenuItem Name="About" Header="_About" />
+                    </MenuItem>
+                </Menu>
+                
+            </StackPanel>
+            <StatusBar VerticalAlignment="Bottom" DockPanel.Dock="Bottom" Height="20">
+                <StatusBarItem>
+                    <TextBlock Name="Statusbar" VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="Test" />
+                </StatusBarItem>
+            </StatusBar>
+        </DockPanel>
+        <ListView Name="lvUsers" Margin="5,20,5,20" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Device" Width="120" DisplayMemberBinding="{Binding Device}" />
+                    <GridViewColumn Header="Information" Width="200" DisplayMemberBinding="{Binding Information}" />
+                    <GridViewColumn Header="Run" Width="200" DisplayMemberBinding="{Binding Run}" />
+                    <GridViewColumn Header="Deployment" Width="200" DisplayMemberBinding="{Binding Deployment}" />
+                    <GridViewColumn Header="Output" Width="300" DisplayMemberBinding="{Binding Output}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

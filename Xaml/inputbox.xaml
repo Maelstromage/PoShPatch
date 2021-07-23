@@ -1,0 +1,23 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="inputbox" Height="250" Width="176">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <TextBox Name="inputText" Grid.Row="0" Grid.ColumnSpan="2" Text="" TextWrapping="Wrap" AcceptsReturn="True" />
+        <Button Name="inputOK" Content="OK" Grid.Column="0" Grid.Row="1" />
+        <Button Name="inputCancel" Content="Cancel" Grid.Column="1" Grid.Row="1"/>
+        <Button Name="FromOU" Content="From OU" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <Button Name="FromLDAP" Content="From LDAP" Grid.Row="3" Grid.ColumnSpan="2"/>
+        <Button Name="UserManagedObjects" Content="From User Name" Grid.Row="4" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
